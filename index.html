@@ -39,7 +39,7 @@
     </div>
 
     <div style="display:none;" id="myCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
+      <div class="carousel-inner" role="listbox" id="carouselInside">
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -96,7 +96,7 @@
             // show the carousel
             $("#myCarousel").show();
             // load it into the slider
-            document.getElementByClass('carousel-inner').innerHTML = wordSlider;
+            document.getElementById('carouselInside').innerHTML = wordSlider;
             //$(".carousel-inner").html(wordSlider);          
         }
 
