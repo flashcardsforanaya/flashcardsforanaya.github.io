@@ -84,13 +84,13 @@
         if (wordsSubmitted) {
           var words = ['dog', 'cat', 'ghost'];
           for (var i = 0, len = words.length; i < len; i++) {
-            wordSlider + '<div class="item '; if (i == 0) { wordSlider + 'active' } wordSlider + '" style="background-color:"' + colors[i] + '>';
-              wordSlider + '<div class="container">';
-                wordSlider + '<div class="carousel-caption">';
-                  wordSlider + '<h1>' + words[i] + '</h1>';
-                wordSlider + '</div>';
-              wordSlider + '</div>';
-            wordSlider + '</div>';
+            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background-color:"' + colors[i] + '>';
+              wordSlider = wordSlider + '<div class="container">';
+                wordSlider = wordSlider + '<div class="carousel-caption">';
+                  wordSlider = wordSlider + '<h1>' + words[i] + '</h1>';
+                wordSlider = wordSlider + '</div>';
+              wordSlider = wordSlider + '</div>';
+            wordSlider = wordSlider + '</div>';
           }    
 
             // show the carousel
