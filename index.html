@@ -112,8 +112,9 @@
         $('#hit').click(function() {
           var words = $('#wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
-            var num = randomNumberFromRange(0, 10);
-            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:' + colors[num] + '">';
+//            var num = randomNumberFromRange(0, 10);
+ //           console.log(num)
+            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:' + colors[i] + '">';
               wordSlider = wordSlider + '<div class="container">';
                 wordSlider = wordSlider + '<div class="carousel-caption">';
                   wordSlider = wordSlider + '<h1>' + words[i] + '</h1>';
