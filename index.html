@@ -37,7 +37,7 @@
     <div id="wordForm">
 
         <h3>Directions Here</h3>
-        <textarea name="wordText" type="text"></textarea>
+        <textarea id="wordText" name="wordText" type="text"></textarea>
         <button id="hit" type="button" name="">Submit</button>
 
     </div>
@@ -84,14 +84,8 @@
         wordSlider = '';
 
         // on click for words
-        var words = $('textarea[name="wordText"]').val();
         $('#hit').click(function() {
-          console.log('words: ' + words);
-          alert('here are words: ' + words);
-        });
-
-        if (wordsSubmitted) {
-          var words = ['dog', 'cat', 'ghost'];
+          var words = $('$wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
             wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background-color:"' + colors[i] + '>';
               wordSlider = wordSlider + '<div class="container">';
@@ -100,15 +94,16 @@
                 wordSlider = wordSlider + '</div>';
               wordSlider = wordSlider + '</div>';
             wordSlider = wordSlider + '</div>';
-          }    
-
+          }
             // hide the form
             $("#wordForm").hide();
             // show the carousel
             $("#myCarousel").show();
             // load it into the slider
             document.getElementById('carouselInside').innerHTML = wordSlider;
-            //$(".carousel-inner").html(wordSlider);          
+
+        });
+
         }
 
         // on click for shuffle
