@@ -39,7 +39,7 @@
     </div>
 
     <div style="display:none;" id="myCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox" id="fillContent">
+      <div class="carousel-inner" role="listbox">
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -91,13 +91,13 @@
                 wordSlider + '</div>';
               wordSlider + '</div>';
             wordSlider + '</div>';
+          }    
 
             // show the carousel
             $("#myCarousel").show();
             // load it into the slider
-            document.getElementById('fillContent').innerHTML = wordSlider;
-            //$(".carousel-inner").html(wordSlider);          
-          }    
+            //document.getElementById('fillContent').innerHTML = wordSlider;
+            $(".carousel-inner").html(wordSlider);          
         }
 
         // on click for shuffle
