@@ -76,12 +76,12 @@
     <script>
     (function () {
         var colors = ['green', 'red', 'blue'];
-        words = true;
+        wordsSubmitted = true;
         wordSlider = '';
 
         // on click for words
 
-        if (words) {
+        if (wordsSubmitted) {
           var words = ['dog', 'cat', 'ghost'];
           for (var i = 0, len = words.length; i < len; i++) {
             wordSlider + '<div class="item '; if (i == 0) { wordSlider + 'active' } wordSlider + '" style="background-color:"' + colors[i] + '>';
@@ -96,8 +96,8 @@
             // show the carousel
             $("#myCarousel").show();
             // load it into the slider
-            //document.getElementById('fillContent').innerHTML = wordSlider;
-            $(".carousel-inner").html(wordSlider);          
+            document.getElementByClass('fillContent').innerHTML = wordSlider;
+            //$(".carousel-inner").html(wordSlider);          
         }
 
         // on click for shuffle
