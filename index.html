@@ -18,13 +18,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style>
-    body {padding-bottom: 40px;color: #5a5a5a;}
+    body {color: #5a5a5a;}
     /* Carousel base class */
-    .carousel {height: 500px;margin-bottom: 60px;}
+    .carousel {height: 100%;}
     /* Since positioning the image, we need to help out the caption */
     .carousel-caption {z-index: 10;}
     /* Declare heights because of positioning of img element */
-    .carousel .item {height: 500px;}
+    .carousel .item {height: 100%;}
     #wordForm { text-align:center; }
     #wordForm h3 { font-size:50px; }
     #wordForm textarea { width:80%; height:400px; }
@@ -33,15 +33,33 @@
       .carousel-caption p {margin-bottom: 20px;font-size: 21px;line-height: 1.4;}
       .featurette-heading {font-size: 50px;}
     }
+    .carousel-control.left {
+      background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+      background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+      background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+      background-image: linear-gradient(to right,rgba(0,0,0,.1) 0,rgba(0,0,0,.0001) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+      background-repeat: repeat-x;
+    }
+    .carousel-control.right {
+      right: 0;
+      left: auto;
+      background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+      background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+      background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+      background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+      background-repeat: repeat-x;
+    }
   </style>
   </head>
   <body>
 
     <div id="wordForm">
 
-        <h3>Directions Here</h3>
-        <textarea id="wordText" name="wordText" type="text"></textarea>
-        <button id="hit" type="button" name="">Submit</button>
+        <h3>Let's Throw Some Words Here</h3>
+        <textarea id="wordText" name="wordText" type="text"></textarea><br/>
+        <button id="hit" type="button" name="" class="btn btn-primary btn-lg">Submit</button>
 
     </div>
 
@@ -82,7 +100,7 @@
     </script>    
     <script>
     (function () {
-        var colors = ['green', 'red', 'blue'];
+        var colors = ['#888', '#333', '#838383'];
         wordsSubmitted = false;
         wordSlider = '';
 
@@ -91,7 +109,7 @@
           var words = $('#wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
             console.log(words[i]);
-            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background-color:\'' + colors[i] + '\'">';
+            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:\'' + colors[i] + '\'">';
               wordSlider = wordSlider + '<div class="container">';
                 wordSlider = wordSlider + '<div class="carousel-caption">';
                   wordSlider = wordSlider + '<h1>' + words[i] + '</h1>';
