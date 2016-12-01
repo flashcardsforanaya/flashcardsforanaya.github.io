@@ -34,7 +34,11 @@
   </head>
   <body>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="wordForm">
+
+    </div>
+
+    <div style="display:none;" id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -46,7 +50,8 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-
+    <div class="reset"></div>
+    <div class="refresh"></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -76,20 +81,23 @@
 
         // on click for words
 
-        if words
-        var words = ['dog', 'cat', 'ghost'];
-        for (var i = 0, len = words.length; i < len; i++) {
-          wordSlider + '<div class="item ' + if (i == 0) { 'active' } + '" style="background-color:"' + colors[i] + '>';
-            wordSlider + '<div class="container">';
-              wordSlider + '<div class="carousel-caption">';
-                wordSlider + '<h1>' + words[i] + '</h1>';
+        if words{
+          var words = ['dog', 'cat', 'ghost'];
+          for (var i = 0, len = words.length; i < len; i++) {
+            wordSlider + '<div class="item '; if (i == 0) { wordSlider + 'active' } wordSlider + '" style="background-color:"' + colors[i] + '>';
+              wordSlider + '<div class="container">';
+                wordSlider + '<div class="carousel-caption">';
+                  wordSlider + '<h1>' + words[i] + '</h1>';
+                wordSlider + '</div>';
               wordSlider + '</div>';
             wordSlider + '</div>';
-          wordSlider + '</div>';
 
-          // load it into the slider
-          $(".carousel-inner").html(wordSlider);          
-        }    
+            // show the carousel
+            $("#myCarousel").show();
+            // load it into the slider
+            $(".carousel-inner").html(wordSlider);          
+          }    
+        }
 
         // on click for shuffle
 
