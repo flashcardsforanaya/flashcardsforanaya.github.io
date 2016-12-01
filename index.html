@@ -193,27 +193,15 @@ body {
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
     
-        <?php
-
-        $words = ['dog', 'cat', 'ghost'];
-        $i = 0;
-
-        foreach ($words as $word)
-        {
-        ?>
-
         <div class="item active">
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1><?php echo $word; ?></h1>
+              <h1 class="carousel-inner"></h1>
             </div>
           </div>
         </div>
-        <?php
-        } 
-        ?>
-
+       
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -249,6 +237,20 @@ body {
 
 })();
     </script>
+    
+            <script>
+
+        var words = ['dog', 'cat', 'ghost'];
+
+        for (var i = 0, len = words.length; i < len; i++) {
+
+          $(".carousel-inner").text($words[len]);
+          
+        }    
+          
+        </script>
+        
+    
   </body>
 </html>
 
