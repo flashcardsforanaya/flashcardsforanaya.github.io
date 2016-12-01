@@ -24,7 +24,7 @@
     /* Since positioning the image, we need to help out the caption */
     .carousel-caption {z-index: 10;}
     /* Declare heights because of positioning of img element */
-    .carousel .item {height: 100%;}
+    .carousel .item {height: 600px;}
     #wordForm { text-align:center; }
     #wordForm h3 { font-size:50px; }
     #wordForm textarea { width:80%; height:400px; }
@@ -109,7 +109,7 @@
           var words = $('#wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
             console.log(words[i]);
-            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:\'' + colors[i] + '\'">';
+            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:' + colors[i] + '">';
               wordSlider = wordSlider + '<div class="container">';
                 wordSlider = wordSlider + '<div class="carousel-caption">';
                   wordSlider = wordSlider + '<h1>' + words[i] + '</h1>';
@@ -134,3 +134,4 @@
     
   </body>
 </html>
+
