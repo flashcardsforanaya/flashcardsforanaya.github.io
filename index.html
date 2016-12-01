@@ -57,9 +57,9 @@
     }
   </style>
   </head>
-  <body>
+  <body style="background:#cadde6;">
 
-    <div id="wordForm" style="background:#cadde6;padding:40px;">
+    <div id="wordForm" style="padding:40px;">
 
         <h3>Words</h3>
         <textarea id="wordText" name="wordText" type="text"></textarea><br/>
@@ -104,7 +104,7 @@
     </script>    
     <script>
     (function () {
-        var colors = ['#888', '#333', '#838383'];
+        var colors = ['#79c711', '#c7114c', '#8911c7', '#bcc711', '#c7112a', '#c76511', '#79c711', '#c71176', '#1184c7', '#2dc711'];
         wordsSubmitted = false;
         wordSlider = '';
 
@@ -112,8 +112,8 @@
         $('#hit').click(function() {
           var words = $('#wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
-            console.log(words[i]);
-            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:' + colors[i] + '">';
+            var num = randomNumberFromRange(0, 10);
+            wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background:' + colors[num] + '">';
               wordSlider = wordSlider + '<div class="container">';
                 wordSlider = wordSlider + '<div class="carousel-caption">';
                   wordSlider = wordSlider + '<h1>' + words[i] + '</h1>';
@@ -129,6 +129,11 @@
             $("#myCarousel").show();
 
         });
+
+        function randomNumberFromRange(min,max)
+        {
+            return (Math.floor(Math.random()*(max-min+1)+min));
+        }
 
         // on click for shuffle
 
