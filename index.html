@@ -85,7 +85,7 @@
 
         // on click for words
         $('#hit').click(function() {
-          var words = $('$wordText').val().split(',');
+          var words = $('#wordText').val().split(',');
           for (var i = 0, len = words.length; i < len; i++) {
             wordSlider = wordSlider + '<div class="item '; if (i == 0) { wordSlider = wordSlider + 'active' } wordSlider = wordSlider + '" style="background-color:"' + colors[i] + '>';
               wordSlider = wordSlider + '<div class="container">';
