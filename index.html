@@ -37,7 +37,7 @@
     <div id="wordForm">
 
         <h3>Directions Here</h3>
-        <textarea id="words" type="text"></textarea>
+        <textarea name="words" type="text"></textarea>
         <button id="hit" type="button" name="">Submit</button>
 
     </div>
@@ -84,7 +84,7 @@
         wordSlider = '';
 
         // on click for words
-        var words = $('#words').val();
+        var words = $('textarea[name='words']').val();
         $('#hit').click(function() {
           console.log('words: ' + words);
           alert('here are words: ' + words);
